@@ -1,26 +1,25 @@
 package presenter
 import contract.ContractInterface.*
 import model.MainModel
-class MainPresenter :IPresenter{
-    private var modell : IModel = MainModel()
+class MainPresenter(var modell:MainModel) :IPresenter{
     override fun getAdd() {
-        modell.addProduct()
+        //modell.addProduct()
     }
 
     override fun getRemove() {
-        modell.removeProduct()
+        //modell.removeProduct()
     }
 
     override fun getIncrement() {
-        modell.incrementProduct()
+        //modell.incrementProduct()
     }
 
     override fun getDecrement() {
-        modell.decrementProduct()
+        //modell.decrementProduct()
     }
 
     override fun getCounter() {
-        modell.counterProduct()
+       //modell.counterProduct()
     }
 
 }
