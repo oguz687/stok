@@ -1,10 +1,15 @@
 package view
 import contract.ContractInterface
+import javafx.beans.property.SimpleIntegerProperty
+import javafx.geometry.Pos
+import javafx.scene.layout.BorderPane as ss
 import javafx.scene.Parent
 import javafx.scene.control.Label
+import javafx.scene.layout.AnchorPane
 import tornadofx.*
 class StokApp : App() {
     override val primaryView = MainView::class
+
 }
 class MainView :View(), ContractInterface.IView {
     override val root = hbox {
@@ -12,8 +17,26 @@ class MainView :View(), ContractInterface.IView {
         label("Waiting")
         resize(1020.0,149.0)
     }
-    override fun initView() {
+
+    override fun clickAddButtons():ContractInterface.IProduct {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
+
+    override fun clickRemoveButton():ContractInterface.IProduct {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun incrementProcess():ContractInterface.IProduct {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun decrementProcess():ContractInterface.IProduct {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun counterView(count:Int):Int {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
 
 }

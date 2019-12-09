@@ -1,25 +1,38 @@
 package presenter
 import contract.ContractInterface.*
 import model.MainModel
-class MainPresenter(var modell:MainModel) :IPresenter{
+import model.Product
+import org.kodein.*
+import org.kodein.di.Kodein
+import org.kodein.di.generic.*
+import org.kodein.di.subKodein
+import view.MainView
+
+class MainPresenter(var modell:MainModel,kodein: Kodein) :IPresenter{
+    val hmodel by kodein.instance<MainModel>()
+    val hproduct by kodein.instance<Product>()
+    val hview by kodein.instance<MainView>()
     override fun getAdd() {
-        //modell.addProduct()
+
+        return hmodel.addProduct(product = hview.clickAddButtons())
+
     }
 
     override fun getRemove() {
-        //modell.removeProduct()
+        return hmodel.removeProduct(product =hview.clickRemoveButton())
     }
 
     override fun getIncrement() {
-        //modell.incrementProduct()
+        return hmodel.incrementProduct(hview.incrementProcess())
     }
 
     override fun getDecrement() {
-        //modell.decrementProduct()
+        return hmodel.decrementProduct(hview.decrementProcess())
     }
 
     override fun getCounter() {
-       //modell.counterProduct()
+        val z=hmodel.counterProduct()
+        hview.counterView(count =z )
     }
 
 }

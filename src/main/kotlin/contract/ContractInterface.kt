@@ -1,6 +1,7 @@
 package contract
 
 import model.Product
+import java.util.function.IntConsumer
 
 interface ContractInterface {
     interface IModel{
@@ -8,17 +9,21 @@ interface ContractInterface {
         fun removeProduct(product: IProduct)
         fun incrementProduct(product: IProduct)
         fun decrementProduct(product: IProduct)
-        fun counterProduct(product: IProduct):Int
+        fun counterProduct():Int
     }
     interface IView{
-        fun initView()
+        fun clickAddButtons()
+        fun clickRemoveButton()
+        fun incrementProcess()
+        fun decrementProcess()
+        fun counterView(count:IntConsumer):Int
     }
     interface IPresenter{
         fun getAdd():Unit
         fun getRemove():Unit
         fun getIncrement():Unit
         fun getDecrement():Unit
-        fun getCounter():Unit
+        fun getCounter()
     }
     interface IProduct{
         var id:Int
