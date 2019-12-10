@@ -8,6 +8,7 @@ class MainModel :IModel {
 //    val kodeind=Kodein {
 //        bind<MainModel>() with singleton { MainModel() }
 //    }
+
     override fun addProduct(product: IProduct) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }

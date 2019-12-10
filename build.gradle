@@ -14,6 +14,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compile group: 'no.tornado', name: 'tornadofx', version: '1.7.19'
     implementation 'org.kodein.di:kodein-di-generic-jvm:6.5.0'
+    compile 'org.litote.kmongo:kmongo:3.11.2'
 
 
 }

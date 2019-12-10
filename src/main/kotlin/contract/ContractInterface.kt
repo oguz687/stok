@@ -12,11 +12,10 @@ interface ContractInterface {
         fun counterProduct():Int
     }
     interface IView{
-        fun clickAddButtons()
-        fun clickRemoveButton()
-        fun incrementProcess()
-        fun decrementProcess()
-        fun counterView(count:IntConsumer):Int
+        fun clickAddButtons():IProduct
+        fun clickRemoveButton():IProduct
+        fun incrementProcess():IProduct
+        fun decrementProcess():IProduct
     }
     interface IPresenter{
         fun getAdd():Unit

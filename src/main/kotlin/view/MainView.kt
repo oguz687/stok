@@ -17,7 +17,7 @@ class MainView :View(), ContractInterface.IView {
         label("Waiting")
         resize(1020.0,149.0)
     }
-
+//fonksiyon tipi Iproduct olmayacak
     override fun clickAddButtons():ContractInterface.IProduct {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
@@ -34,8 +34,9 @@ class MainView :View(), ContractInterface.IView {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun counterView(count:Int):Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    fun counterView(count:Int):Int {
+        return count
+
     }
 
 
