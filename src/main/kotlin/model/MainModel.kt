@@ -5,12 +5,13 @@ import org.kodein.di.generic.instance
 import org.kodein.di.generic.provider
 import org.kodein.di.generic.*
 class MainModel :IModel {
-//    val kodeind=Kodein {
-//        bind<MainModel>() with singleton { MainModel() }
-//    }
+    val datakod=Kodein {
+        bind<Database>() with singleton { Database() }
+    }
 
     override fun addProduct(product: IProduct) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        
+
     }
 
     override fun removeProduct(product: IProduct) {
