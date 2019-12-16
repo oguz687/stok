@@ -1,16 +1,13 @@
 package model
 import contract.ContractInterface.*
-import org.kodein.di.*
-import org.kodein.di.generic.instance
-import org.kodein.di.generic.provider
-import org.kodein.di.generic.*
+
 class MainModel :IModel {
-    val datakod=Kodein {
-        bind<Database>() with singleton { Database() }
-    }
+//    val datakod=Kodein {
+//        bind<Database>() with singleton { Database() }
+//    }
 
     override fun addProduct(product: IProduct) {
-        
+
 
     }
 

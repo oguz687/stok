@@ -1,7 +1,11 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.3.60'
-}
 
+
+}
+ext{
+    koin_version = '2.0.1'
+}
 group 'com.yazilim.stok'
 version '1.0-SNAPSHOT'
 
@@ -11,12 +15,13 @@ repositories {
 }
 
 dependencies {
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compile group: 'no.tornado', name: 'tornadofx', version: '1.7.19'
-    implementation 'org.kodein.di:kodein-di-generic-jvm:6.5.0'
     compile 'org.litote.kmongo:kmongo:3.11.2'
     compile group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.0'
-
+    compile "org.koin:koin-core:$koin_version"
+    compile "org.koin:koin-core-ext:$koin_version"
 
 }
 

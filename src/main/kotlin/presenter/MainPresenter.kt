@@ -1,17 +1,20 @@
 package presenter
 import contract.ContractInterface.*
+import model.Database
 import model.MainModel
 import model.Product
-import org.kodein.*
-import org.kodein.di.Kodein
-import org.kodein.di.generic.*
-import org.kodein.di.subKodein
 import view.MainView
+import org.koin.*
+import org.koin.core.KoinComponent
+import org.koin.core.inject
+import org.koin.dsl.koinApplication
+import org.koin.dsl.module
 
-class MainPresenter(var modell:MainModel,kodein: Kodein) :IPresenter{
-    val hmodel by kodein.instance<MainModel>()
-    val hproduct by kodein.instance<Product>()
-    val hview by kodein.instance<MainView>()
+class MainPresenter(var modell:MainModel) :IPresenter,KoinComponent{
+    val hmodel by inject<MainModel>()
+    val hproduct by inject<Product>()
+    val hview by inject<MainView>()
+    val yut= koinApplication { single { Database() } }
     override fun getAdd() {
 
         return hmodel.addProduct(product = hview.clickAddButtons())

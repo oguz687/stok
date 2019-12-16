@@ -2,6 +2,7 @@ package model
 import com.mongodb.*
 import org.bson.Document
 
+
 class Database {
     val client=MongoClient(MongoClientURI("mongodb://localhost:27017"))
     val database=client.getDatabase("stok")
