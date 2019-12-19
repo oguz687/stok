@@ -14,7 +14,7 @@ class MainPresenter(var modell:MainModel) :IPresenter,KoinComponent{
     val hmodel by inject<MainModel>()
     val hproduct by inject<Product>()
     val hview by inject<MainView>()
-    val yut= koinApplication { single { Database() } }
+
     override fun getAdd() {
 
         return hmodel.addProduct(product = hview.clickAddButtons())
