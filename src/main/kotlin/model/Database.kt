@@ -5,9 +5,9 @@ import org.bson.Document
 import org.koin.core.inject
 
 class Database {
-    private val client=MongoClient(MongoClientURI("mongodb://localhost:27017"))
+    val client=MongoClient(MongoClientURI("mongodb://localhost:27017"))
     val database=client.getDatabase("stok")
-    val cre=database.createCollection("ürünler")
+//    val cre=database.createCollection("ürünler")
     val col=database.getCollection("ürünler")
     val doc=Document().append("isim","soyisim")
 
@@ -17,7 +17,8 @@ class Database {
     }
 
 }
-//fun main(){
-//    val ornt= Database()
-//
-//}
+fun main(){
+    val ornt= Database()
+    ornt.ekle(product = Product(32,"FD",23,"DFSD"))
+
+}
