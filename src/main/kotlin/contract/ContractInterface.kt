@@ -26,8 +26,8 @@ interface ContractInterface {
     }
     interface IProduct{
         var id:Int
-        var name:String
-        var count:Int
-        var owner:String
+        var name:String?
+        var count:Int?
+        var owner:String?
     }
 }
